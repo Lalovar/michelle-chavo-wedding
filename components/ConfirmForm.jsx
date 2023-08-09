@@ -13,7 +13,11 @@ import LoadingButton from '@mui/lab/LoadingButton';
 
 
 export default function ConfirmForm() {
-    const already = JSON.parse(localStorage.getItem("inf")) || { name: null, email: null, number: null, going: null }
+    let already
+    if (typeof window !== 'undefined') {
+        already = JSON.parse(localStorage.getItem("inf")) || { name: null, email: null, number: null, going: null }
+    }
+
     const [name, setName] = React.useState(already.name);
     const [email, setEmail] = React.useState(already.email);
     const [number, setNumber] = React.useState(already.number);

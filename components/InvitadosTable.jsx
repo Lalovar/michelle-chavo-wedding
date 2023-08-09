@@ -8,12 +8,12 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 // import LinearProgress from '@mui/material/LinearProgress';
-import { createKysely } from '@vercel/postgres-kysely';
+// import { createKysely } from '@vercel/postgres-kysely';
 
-const deleteInvitados = (selectedRows) => {
-    const db = createKysely();
-    return db.deleteFrom('invitados').where("id", "in",).execute();
-}
+// const deleteInvitados = (selectedRows) => {
+//     const db = createKysely();
+//     return db.deleteFrom('invitados').where("id", "in",).execute();
+// }
 
 export default function InvitadosTable({ rows }) {
     const [rowSelectionModel, setRowSelectionModel] = React.useState([]);
