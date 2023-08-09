@@ -25,6 +25,7 @@ export default async function Page() {
       actions: 1
     }
   })
+  console.log("🌍🌍🌍🌍🌍",refinedRows)
   return (
     <main className={"some"}>
       <Typography variant="h5" gutterBottom textAlign={"center"}>

@@ -15,20 +15,20 @@ import LoadingButton from '@mui/lab/LoadingButton';
 export default function ConfirmForm() {
     let already
     if (typeof window !== 'undefined') {
-        already = JSON.parse(localStorage.getItem("inf")) || { name: null, email: null, number: null, going: null }
+        already = JSON.parse(localStorage.getItem("inf"))
     }
 
-    const [name, setName] = React.useState(already.name);
-    const [email, setEmail] = React.useState(already.email);
-    const [number, setNumber] = React.useState(already.number);
-    const [going, setGoing] = React.useState(already.going);
+    const [name, setName] = React.useState(already?.name);
+    const [email, setEmail] = React.useState(already?.email);
+    const [number, setNumber] = React.useState(already?.number);
+    const [going, setGoing] = React.useState(already?.going);
     const [disabled, setDisabled] = React.useState(!!already);
     const [loading, setLoading] = React.useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         setLoading(true)
-        const id = already.id ?? new Date().valueOf();
+        const id = already?.id ?? new Date().valueOf();
         const logged = new Date();
         const body = JSON.stringify({ id, name, logged, going, email, number, replace: !!already })
         fetch("/invitados", {
