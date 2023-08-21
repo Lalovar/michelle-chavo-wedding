@@ -1,18 +1,20 @@
-import { createKysely } from '@vercel/postgres-kysely';
-import { NextResponse } from 'next/server'
+import addData from "@/firebase/addData";
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
-  const { id, name, going, logged, number, email, replace } = await request.json()
+  const { id, name, going, logged, number, email } = await request.json();
+
   try {
-    const db = createKysely();
-    if (replace) {
-      const operation = await db.updateTable('invitados').set({ name, logged, going, number, email }).where("id", "=", id).executeTakeFirst()
-    }
-    else {
-      const operation = await db.insertInto('invitados').values({ id, name, logged, going, number, email }).execute()
-    }
+    const { result, error } = await addData("invitados", String(id), {
+      name: name,
+      going: going === "true" ? true : false,
+      logged,
+      phone: number ?? "",
+      email: email ?? "",
+    });
+    return NextResponse.json({ status: 200, result, error });
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 })
+    console.log("🖕🖕🖕", err);
+    return NextResponse.json({ error: err }, { status: 500 });
   }
-  return NextResponse.json({ status: 200 })
 }
