@@ -118,7 +118,7 @@ function AlertDialog({
   fetchRowData,
   setRows
 }) {
-  const handleClose = () => {
+  const handleConfirm = () => {
     setOpen(false);
     setLoading(true);
     const ids = invitesToDelete.map((invites) => invites.id);
@@ -138,6 +138,9 @@ function AlertDialog({
         fetchRowData()
       });
   };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Dialog open={open} onClose={handleClose}>
@@ -156,7 +159,7 @@ function AlertDialog({
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>Cancelar</Button>
-        <Button onClick={handleClose} autoFocus color="error">
+        <Button onClick={handleConfirm} autoFocus color="error">
           Eliminar
         </Button>
       </DialogActions>
