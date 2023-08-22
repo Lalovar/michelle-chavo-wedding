@@ -1,6 +1,7 @@
 import * as React from "react";
 import ConfirmForm from "../components/ConfirmForm";
 import bg1 from "../public/img2.jpg";
+import WeedingTimeline from "../components/WeedingTimeline";
 
 export default function Page() {
   return (
@@ -40,6 +41,7 @@ export default function Page() {
           </p>
           <h3>16/12/2023</h3>
         </span>
+        <WeedingTimeline />
       </div>
       <ConfirmForm />
     </main>
