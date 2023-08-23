@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +7,14 @@
 html,
 body {
   overflow-x: hidden;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
 a {
@@ -20,7 +27,7 @@ a {
   background-repeat: no-repeat;
   background-position: 10% 30%;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   padding-top: 40vh;
   background-color: #a16b9030;
 }
@@ -44,7 +51,7 @@ a {
 .phrase {
   background-color: #a16b9030;
   text-align: center;
-  height: 70vh;
+  height: 100vh;
   margin-bottom: 50px;
   padding-top: 25vh;
   text-transform: uppercase;
@@ -57,7 +64,6 @@ a {
   padding-top: 10vh;
   text-transform: uppercase;
 }
-
 
 .phrase2 > table {
   text-align: center;
@@ -88,9 +94,22 @@ a {
   max-width: 500px;
 }
 
+@media only screen and (max-width: 600px) {
+  .timeline {
+    padding-top: 3em;
+    margin-bottom: 13em;
+    max-width: 300px;
+  }
+}
+
 .timeline > p {
   font-size: large;
   font-weight: lighter;
-  padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.confirmForm {
+  height: 50vh;
+  padding-top: 20vh;
+  text-transform: uppercase;
 }

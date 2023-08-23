@@ -43,7 +43,9 @@ export default function Page() {
         </span>
         <WeedingTimeline />
       </div>
-      <ConfirmForm />
+      <div className="confirmForm">
+        <ConfirmForm />
+      </div>
     </main>
   );
 }
