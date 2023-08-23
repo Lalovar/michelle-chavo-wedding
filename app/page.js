@@ -1,9 +1,9 @@
 import * as React from "react";
 import ConfirmForm from "../components/ConfirmForm";
 import bg1 from "../public/img2.jpg";
-import bg2 from "../public/img1.jpg";
+import liverpool from "../public/liverpool.png";
 import WeedingTimeline from "../components/WeedingTimeline";
-import { Typography } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 
 export default function Page() {
   return (
@@ -46,6 +46,21 @@ export default function Page() {
           <h3>16/12/2023</h3>
         </span>
         <WeedingTimeline />
+      </div>
+      <div className="mesaDeRegalos">
+        <Typography variant="h4">Mesa de Regalos</Typography>
+        <Typography variant="body2">
+          El mejor regalo que nos puedes dar es tu presencia, pero si quieres
+          obsequiarnos algo puedes hacerlo a través de la siguiente mesa de
+          regalos:
+        </Typography>
+        <br />
+        <a
+          href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51132181"
+          target="_blank"
+        >
+          <img src={liverpool.src} alt="Link a mesa de regalos" width="200px" />
+        </a>
       </div>
       <div className="confirmForm">
         <Typography variant="h4">Confirma tu asistencia</Typography>
