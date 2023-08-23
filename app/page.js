@@ -1,6 +1,7 @@
 import * as React from "react";
 import ConfirmForm from "../components/ConfirmForm";
 import bg1 from "../public/img2.jpg";
+import bg2 from "../public/img1.jpg";
 import WeedingTimeline from "../components/WeedingTimeline";
 
 export default function Page() {
@@ -12,7 +13,7 @@ export default function Page() {
           <span>16.12.2023</span>
         </h1>
       </div>
-      <div className="phrase">
+      <div className="phrase" style={{ backgroundImage: `url(${bg2.src})` }} >
         <p>Este es el sueño que compartimos...</p>
         <p>El que queremos cuidar a través de los años...</p>
         <p>El que hablará por nosotros, mas que toda palabra...</p>

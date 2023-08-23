@@ -7,14 +7,7 @@
 html,
 body {
   overflow-x: hidden;
-}
-
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -38,7 +31,7 @@ a {
   font-family: "Caveat", cursive;
   font-size: 6em;
   font-weight: normal;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 20px #000;
 }
 
 .header > h1 > span {
@@ -49,12 +42,18 @@ a {
 }
 
 .phrase {
-  background-color: #a16b9030;
   text-align: center;
-  height: 100vh;
+  height: 90vh;
   margin-bottom: 50px;
   padding-top: 25vh;
   text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: 10% 30%;
+  background-size: cover;
+  color: white;
+  font-weight:bold;
+  font-size: large;
+  text-shadow: 0 0 10px #000;
 }
 
 .phrase2 {
@@ -109,7 +108,7 @@ a {
 }
 
 .confirmForm {
+  margin-top: 800px;
   height: 50vh;
-  padding-top: 20vh;
   text-transform: uppercase;
 }
