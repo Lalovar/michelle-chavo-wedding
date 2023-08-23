@@ -4,6 +4,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { Analytics } from "@vercel/analytics/react";
 import logo from "../public/logo.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <meta property="og:image" content={logo} />
       <link rel="icon" href="/icon.png" sizes="any" />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
