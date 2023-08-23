@@ -43,24 +43,17 @@ a {
 
 .phrase {
   text-align: center;
-  height: 90vh;
-  margin-bottom: 50px;
-  padding-top: 25vh;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
   text-transform: uppercase;
-  background-repeat: no-repeat;
-  background-position: 10% 30%;
-  background-size: cover;
-  color: white;
-  font-weight:bold;
-  font-size: large;
-  text-shadow: 0 0 10px #000;
+  background-color: #a16b9030;
+  font-size: larger;
 }
 
 .phrase2 {
   text-align: center;
-  height: 50vh;
-  margin-bottom: 600px;
-  padding-top: 10vh;
+  padding-top: 4vh;
+  margin-bottom: 100px;
   text-transform: uppercase;
 }
 
@@ -108,7 +101,20 @@ a {
 }
 
 .confirmForm {
-  margin-top: 800px;
-  height: 50vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-transform: uppercase;
+  background-color: #a16b9030;
+}
+
+.confirmForm > h4 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.confirmForm > p {
+  text-align: center;
+  margin-bottom: 2em;
 }
